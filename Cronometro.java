@@ -10,7 +10,7 @@ public class Cronometro {
             System.out.println("Ingresa el limite de horas: ");
             int horalimite = sc.nextInt();
             sc.close();
-            if (segundolimite > 60 || minutolimite > 60 || horalimite > 24) {
+            if (segundolimite > 60 || minutolimite > 60 || horalimite > 23) {
                 System.out.println("Datos ingresados no validos");
                 break;
             }
@@ -36,6 +36,9 @@ public class Cronometro {
                     if (minuto >= 60) {
                         hora++;        //Suma de horas
                         minuto = 0;
+                    }
+                    if (hora == 24) {
+                        break;
                     }
                     }
                 }
